@@ -59,6 +59,7 @@ entry just renders a shorter page rather than empty boxes.
 | `conservation` | Object? | `iucnStatus` (e.g. `"Least Concern"`), `localStatus` (free text, varies by region/authority). |
 | `habits` | Object? | `roosting`, `migration`, `feeding`, `reproduction`, `other` — each free text. |
 | `references` | [String]? | Citations, rendered verbatim in small type at the foot of the species page. Any format is fine as long as it's readable — e.g. `"Author, A. (Year) Title. Journal, Vol(Issue), pages."` |
+| `contributors` | [Contributor]? | Edit history shown via a sheet at the top of the References section. **The first entry is treated as the page's creator; every entry after that is an editor.** Each is `{ "name": String, "date": String (ISO 8601), "note": String? }` — add one entry (with today's date and a short note on what you changed) every time you edit a species you didn't create. |
 
 ### Example entry
 
@@ -82,9 +83,17 @@ entry just renders a shorter page rather than empty boxes.
   },
   "references": [
     "Jones, G. & Rayner, J.M.V. (1988) Flight performance, foraging tactics and echolocation in free-living Daubenton's bats. Journal of Zoology, 215(1), 113–132."
+  ],
+  "contributors": [
+    { "name": "Jane Doe", "date": "2026-07-01T00:00:00Z", "note": "Created species profile" },
+    { "name": "John Smith", "date": "2026-07-06T00:00:00Z", "note": "Added echolocation measurements" }
   ]
 }
 ```
+
+The first `contributors` entry (Jane Doe here) is the creator; anyone else who
+later edits the entry appends their own `{ name, date, note }` after it —
+don't overwrite or remove earlier entries.
 
 See existing entries in `SpeciesGuideData.json` for more complete, real
 examples.

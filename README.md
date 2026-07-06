@@ -1,9 +1,49 @@
 # OpenBat
 
-OpenBat is an iOS bat detector app. This repo also hosts the **Species Field
-Guide** data — a single community-editable JSON file the app downloads and
-displays in its Species section. This README covers how to contribute to
-that guide. 
+OpenBat is an iOS app that turns a compatible ultrasonic USB microphone into
+a live bat detector. It captures audio at up to 384 kHz, shows a real-time
+spectrogram, detects individual echolocation pulses, and — where an openly
+available model exists for the region — identifies the species on-device.
+
+## Why
+
+Most tools for identifying bat calls are expensive, proprietary, and hard to
+get hold of, which puts the experience out of reach for a lot of people who'd
+genuinely enjoy it. Free apps that work with ultrasonic microphones already
+exist, but as far as we know, none of them use the open-source machine
+learning models that have been trained on bat echolocation calls. By building
+that identification directly into the app, OpenBat helps people put a name to
+the call they just heard — a small moment of recognition that builds a real
+connection with bats, and a bit more respect for them too.
+
+## Features
+
+- **Real-time spectrogram** — high-resolution frequency-vs-time display with
+  drag-to-scroll history.
+- **Pulse detection & zoom** — isolates each call and renders an
+  onset-aligned close-up.
+- **Species ID** — an on-device classifier names the species, with
+  runner-up and confidence.
+- **Heterodyne & time-expansion listening** — hear the ultrasound live,
+  tuned down or slowed 10×.
+- **Sessions & map** — log passes with a GPS track and see where each was
+  heard.
+- **Community field guide** — a species reference built into the app,
+  covering morphology, echolocation, conservation status and habits (see
+  below).
+
+## Getting started
+
+Connect a compatible ultrasonic USB microphone, press Start, and point it at
+the sky. Detected passes are logged with their species, confidence, and a
+spectrogram of the pulses. Start a Session to also record a GPS track and
+map where each pass was heard.
+
+## Species Field Guide
+
+This repo also hosts the **Species Field Guide** data — a single
+community-editable JSON file the app downloads and displays in its Species
+section. The rest of this README covers how to contribute to that guide.
 
 ## Contributing a species or region
 

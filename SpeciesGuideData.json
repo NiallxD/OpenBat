@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 2,
-  "dataVersion": 3,
+  "schemaVersion": 1,
+  "dataVersion": 4,
   "updatedAt": "2026-07-06T00:00:00Z",
   "regions": [
     {
@@ -68,7 +68,12 @@
         "feeding": "Aerial hawking for small Diptera (midges, mosquitoes) along hedgerows, woodland edge and over water; a single bat can eat thousands of insects a night.",
         "reproduction": "Mates in autumn with delayed fertilisation; females form maternity colonies in late spring, giving birth to a single pup in June/July.",
         "other": "One of the first bats to emerge at dusk, often within 20 minutes of sunset."
-      }
+      },
+      "references": [
+        "Barlow, K.E. & Jones, G. (1997) Function of pipistrelle social calls: field data and a playback experiment. Animal Behaviour, 53(5), 991–999.",
+        "Davidson-Watts, I. & Jones, G. (2006) Differences in foraging behaviour between Pipistrellus pipistrellus and Pipistrellus pygmaeus. Journal of Zoology, 268(1), 55–62.",
+        "Bat Conservation Trust (2023) Common Pipistrelle. bats.org.uk/about-bats/bat-species-in-the-uk/common-pipistrelle"
+      ]
     },
     {
       "id": "myotis-lucifugus",

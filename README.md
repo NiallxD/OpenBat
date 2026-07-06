@@ -3,7 +3,7 @@
 OpenBat is an iOS bat detector app. This repo also hosts the **Species Field
 Guide** data — a single community-editable JSON file the app downloads and
 displays in its Species section. This README covers how to contribute to
-that guide. (For app/build docs, see `CLAUDE.md`.)
+that guide. 
 
 ## Contributing a species or region
 

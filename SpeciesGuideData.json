@@ -1,6 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "dataVersion": 2,
+  "updatedAt": "2026-07-06T00:00:00Z",
   "regions": [
     {
       "id": "uk-ireland",
@@ -32,9 +33,42 @@
       "id": "pipistrellus-pipistrellus",
       "commonName": "Common Pipistrelle",
       "scientificName": "Pipistrellus pipistrellus",
+      "order": "Chiroptera",
       "family": "Vespertilionidae",
       "regions": ["uk-ireland", "continental-europe"],
-      "summary": "One of the smallest and most widespread European bats. Echolocates with FM sweeps ending around 45 kHz; a fast, erratic flier commonly seen at dusk around gardens, hedgerows and waterways."
+      "summary": "One of the smallest and most widespread European bats. Echolocates with FM sweeps ending around 45 kHz; a fast, erratic flier commonly seen at dusk around gardens, hedgerows and waterways.",
+      "measurements": {
+        "forearmMmRange": { "min": 27.0, "max": 32.0 },
+        "wingspanCmRange": { "min": 18.0, "max": 24.0 },
+        "weightGRange": { "min": 3.5, "max": 8.5 },
+        "color": "Dark brown fur above, paler brown-buff below; blackish face, ears and wing membranes."
+      },
+      "morphology": {
+        "earType": "Short, rounded, with a blunt tragus",
+        "tailType": "Tail fully enclosed within the tail membrane (uropatagium)",
+        "noseType": "Simple, no nose-leaf",
+        "otherFeatures": ["Keeled calcar", "Fast, jinking flight"]
+      },
+      "echolocation": {
+        "callType": "FM",
+        "peakFreqHzRange": { "min": 45000, "max": 47000 },
+        "characteristicFreqHzRange": { "min": 46000, "max": 46000 },
+        "freqHighHzRange": { "min": 60000, "max": 70000 },
+        "freqLowHzRange": { "min": 40000, "max": 45000 },
+        "durationMsRange": { "min": 4.0, "max": 8.0 },
+        "notes": "Steep FM sweep ending in a near-flat tail around 46 kHz; distinguishable from Soprano Pipistrelle by ~10 kHz lower Fc."
+      },
+      "conservation": {
+        "iucnStatus": "Least Concern",
+        "localStatus": "Protected in the UK & Ireland under the Wildlife and Countryside Act 1981"
+      },
+      "habits": {
+        "roosting": "Roosts in buildings — roof spaces, soffits, cavity walls — as well as tree holes; maternity colonies can number in the hundreds.",
+        "migration": "Largely sedentary; some short-distance seasonal movement between summer and winter roosts.",
+        "feeding": "Aerial hawking for small Diptera (midges, mosquitoes) along hedgerows, woodland edge and over water; a single bat can eat thousands of insects a night.",
+        "reproduction": "Mates in autumn with delayed fertilisation; females form maternity colonies in late spring, giving birth to a single pup in June/July.",
+        "other": "One of the first bats to emerge at dusk, often within 20 minutes of sunset."
+      }
     },
     {
       "id": "myotis-lucifugus",
@@ -43,14 +77,6 @@
       "family": "Vespertilionidae",
       "regions": ["north-america"],
       "summary": "Once among the most common bats in North America, now heavily impacted by white-nose syndrome. Calls sweep from about 80 kHz down to 40 kHz; forages over water and along forest edges."
-    },
-    {
-      "id": "lasiurus-cinereus",
-      "commonName": "Hoary Bat",
-      "scientificName": "Lasiurus cinereus",
-      "family": "Vespertilionidae",
-      "regions": ["north-america"],
-      "summary": "The hoary bat averages 13 to 14.5 cm (5.1 to 5.7 in) long with a 40 cm (15.5 in) wingspan and a weight of 26 g (0.92 oz). It is the largest bat normally found in Canada. Its coat is dense and dark brown, with white tips to the hairs that give the species its 'hoary' appearance for which it is named."
     },
     {
       "id": "pteropus-poliocephalus",

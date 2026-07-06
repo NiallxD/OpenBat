@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataVersion": 1,
+  "dataVersion": 2,
   "regions": [
     {
       "id": "uk-ireland",
@@ -43,6 +43,14 @@
       "family": "Vespertilionidae",
       "regions": ["north-america"],
       "summary": "Once among the most common bats in North America, now heavily impacted by white-nose syndrome. Calls sweep from about 80 kHz down to 40 kHz; forages over water and along forest edges."
+    },
+    {
+      "id": "lasiurus-cinereus",
+      "commonName": "Hoary Bat",
+      "scientificName": "Lasiurus cinereus",
+      "family": "Vespertilionidae",
+      "regions": ["north-america"],
+      "summary": "The hoary bat averages 13 to 14.5 cm (5.1 to 5.7 in) long with a 40 cm (15.5 in) wingspan and a weight of 26 g (0.92 oz). It is the largest bat normally found in Canada. Its coat is dense and dark brown, with white tips to the hairs that give the species its 'hoary' appearance for which it is named."
     },
     {
       "id": "pteropus-poliocephalus",

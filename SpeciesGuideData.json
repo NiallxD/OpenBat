@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": 1,
+  "regions": [
+    {
+      "id": "uk-ireland",
+      "name": "UK & Ireland",
+      "latitude": 54.0,
+      "longitude": -4.0
+    },
+    {
+      "id": "continental-europe",
+      "name": "Continental Europe",
+      "latitude": 48.5,
+      "longitude": 10.0
+    },
+    {
+      "id": "north-america",
+      "name": "North America",
+      "latitude": 45.0,
+      "longitude": -95.0
+    },
+    {
+      "id": "australia-east",
+      "name": "Eastern Australia",
+      "latitude": -30.0,
+      "longitude": 150.0
+    }
+  ],
+  "species": [
+    {
+      "id": "pipistrellus-pipistrellus",
+      "commonName": "Common Pipistrelle",
+      "scientificName": "Pipistrellus pipistrellus",
+      "family": "Vespertilionidae",
+      "regions": ["uk-ireland", "continental-europe"],
+      "summary": "One of the smallest and most widespread European bats. Echolocates with FM sweeps ending around 45 kHz; a fast, erratic flier commonly seen at dusk around gardens, hedgerows and waterways."
+    },
+    {
+      "id": "myotis-lucifugus",
+      "commonName": "Little Brown Bat",
+      "scientificName": "Myotis lucifugus",
+      "family": "Vespertilionidae",
+      "regions": ["north-america"],
+      "summary": "Once among the most common bats in North America, now heavily impacted by white-nose syndrome. Calls sweep from about 80 kHz down to 40 kHz; forages over water and along forest edges."
+    },
+    {
+      "id": "pteropus-poliocephalus",
+      "commonName": "Grey-headed Flying-fox",
+      "scientificName": "Pteropus poliocephalus",
+      "family": "Pteropodidae",
+      "regions": ["australia-east"],
+      "summary": "A large fruit bat endemic to eastern Australia with a wingspan up to a metre. Does not echolocate — it navigates by sight and smell, and is a keystone pollinator and seed disperser."
+    }
+  ]
+}

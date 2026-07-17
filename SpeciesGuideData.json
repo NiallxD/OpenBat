@@ -18,25 +18,25 @@
     {
       "id": "canada-east",
       "name": "Eastern Canada",
-      "latitude": 45.0,
+      "latitude": 58.0,
       "longitude": -81.0
     },
     {
       "id": "canada-west",
       "name": "Western Canada",
-      "latitude": 45,
+      "latitude": 58.0,
       "longitude": -113.7
     },
     {
       "id": "america-east",
       "name": "Eastern US",
-      "latitude": 40.0,
+      "latitude": 38.0,
       "longitude": -81.0
     },
     {
       "id": "america-west",
       "name": "Western US",
-      "latitude": 40.0,
+      "latitude": 38.0,
       "longitude": -113.7
     },
     {

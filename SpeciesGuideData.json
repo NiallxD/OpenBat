@@ -16,10 +16,28 @@
       "longitude": 10.0
     },
     {
-      "id": "north-america",
-      "name": "North America",
+      "id": "canada-east",
+      "name": "Eastern Canada",
       "latitude": 45.0,
-      "longitude": -95.0
+      "longitude": -81.0
+    },
+    {
+      "id": "canada-west",
+      "name": "Western Canada",
+      "latitude": 45,
+      "longitude": -113.7
+    },
+    {
+      "id": "america-east",
+      "name": "Eastern US",
+      "latitude": 40.0,
+      "longitude": -81.0
+    },
+    {
+      "id": "america-west",
+      "name": "Western US",
+      "latitude": 40.0,
+      "longitude": -113.7
     },
     {
       "id": "australia-east",

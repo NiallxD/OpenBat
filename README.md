@@ -160,3 +160,12 @@ Please don't rename or remove an existing region `id` or species `id` in
 the same PR as unrelated content changes, other entries and, in the case
 of species ids, potentially saved user data reference these by string, so a
 rename should be its own deliberate PR.
+
+## Species Range Maps
+
+In addition to the **Species Guide Data** this repo alos holds a JSON file
+with coordinates for the species range maps. This JSON is generated manually
+and is updated periodically. The OpenBat app downloads new versions of this
+file on the fly so no app updates are needed.
+
+**Please do not touch the SpeciesRangeData.json**

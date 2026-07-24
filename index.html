@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenBat | NiallxD</title>
+    
+    <!-- Load marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <style>
         /* Basic Reset & Variables */
         :root {
@@ -12,9 +16,10 @@
             --dark: #1F2937;
             --light: #F9FAFB;
             --gray: #6B7280;
+            --border: #E5E7EB;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--light); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--light); display: flex; flex-direction: column; min-height: 100vh; }
         a { text-decoration: none; color: inherit; }
         
         /* Navigation */
@@ -26,24 +31,41 @@
         .nav-cta:hover { background: #111827; }
 
         /* Hero Section */
-        header { text-align: center; padding: 6rem 5% 4rem; background: white; }
-        h1 { font-size: 3rem; margin-bottom: 1rem; color: var(--dark); }
-        .subtitle { font-size: 1.2rem; color: var(--gray); max-width: 600px; margin: 0 auto 2rem; }
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; font-size: 1.1rem; font-weight: bold; transition: background 0.3s; }
-        .btn:hover { background: var(--primary-hover); }
+        header { text-align: center; padding: 4rem 5% 2rem; background: white; border-bottom: 1px solid var(--border); }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--dark); }
+        .subtitle { font-size: 1.1rem; color: var(--gray); max-width: 600px; margin: 0 auto 1.5rem; }
 
-        /* Features Section */
-        .features { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
-        .card h3 { margin-bottom: 1rem; color: var(--primary); }
-        .card p { color: var(--gray); }
+        /* README Content Container */
+        .readme-container {
+            max-width: 850px;
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            flex-grow: 1;
+            width: 90%;
+        }
+
+        /* Markdown Styles */
+        .readme-container h1, .readme-container h2, .readme-container h3 { margin-top: 1.5rem; margin-bottom: 1rem; color: var(--dark); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+        .readme-container h1 { font-size: 2rem; }
+        .readme-container p { margin-bottom: 1rem; color: #374151; }
+        .readme-container a { color: var(--primary); text-decoration: underline; }
+        .readme-container ul, .readme-container ol { margin-left: 2rem; margin-bottom: 1rem; color: #374151; }
+        .readme-container code { background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; font-size: 0.9em; color: #ef4444; }
+        .readme-container pre { background: #1f2937; color: #f9fafb; padding: 1rem; border-radius: 6px; overflow-x: auto; margin-bottom: 1rem; }
+        .readme-container pre code { background: none; color: inherit; padding: 0; }
+        .readme-container blockquote { border-left: 4px solid var(--border); padding-left: 1rem; margin-bottom: 1rem; color: var(--gray); font-style: italic; }
+        .readme-container img { max-width: 100%; border-radius: 6px; }
 
         /* Footer */
         footer { text-align: center; padding: 2rem 5%; background: var(--dark); color: white; margin-top: 4rem; }
         
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links { display: none; /* In a real app, you'd add a hamburger menu here */ }
+            .nav-links { display: none; }
+            .readme-container { padding: 1.5rem; margin: 1.5rem auto; }
         }
     </style>
 </head>
@@ -54,7 +76,6 @@
         <div class="logo">OpenBat</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="#features">Features</a>
             <a href="privacy.html">Privacy Policy</a>
             <a href="https://github.com/NiallxD/OpenBat" target="_blank" class="nav-cta">View on GitHub</a>
         </div>
@@ -62,31 +83,49 @@
 
     <!-- Hero Section -->
     <header>
-        <h1>Welcome to OpenBat</h1>
-        <p class="subtitle">An open-source project by NiallxD. Enhance your workflow, build faster, and contribute to a growing ecosystem.</p>
-        <a href="https://github.com/NiallxD/OpenBat" target="_blank" class="btn">View Repository</a>
+        <h1>OpenBat</h1>
+        <p class="subtitle">An open-source project by NiallxD.</p>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="card">
-            <h3>Open Source</h3>
-            <p>Fully transparent codebase. Fork it, tweak it, and contribute back to the community.</p>
-        </div>
-        <div class="card">
-            <h3>Lightweight</h3>
-            <p>Built with performance in mind. No unnecessary bloat, just the features you actually need.</p>
-        </div>
-        <div class="card">
-            <h3>Easy Integration</h3>
-            <p>Designed to drop right into your existing setup with minimal configuration required.</p>
-        </div>
-    </section>
+    <!-- README Content Gets Injected Here -->
+    <main class="readme-container" id="readme-content">
+        <p style="text-align: center; color: var(--gray);"><em>Loading documentation from GitHub...</em></p>
+    </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 NiallxD. Released under the MIT License.</p>
     </footer>
 
+    <!-- Script to Fetch and Render README.md -->
+    <script>
+        async function loadReadme() {
+            const contentDiv = document.getElementById('readme-content');
+            
+            try {
+                // Try fetching from the 'main' branch first
+                let response = await fetch('https://raw.githubusercontent.com/NiallxD/OpenBat/main/README.md');
+                
+                // If 'main' fails, try 'master' branch
+                if (!response.ok) {
+                    response = await fetch('https://raw.githubusercontent.com/NiallxD/OpenBat/master/README.md');
+                }
+
+                if (response.ok) {
+                    const markdownText = await response.text();
+                    // Convert markdown to HTML using marked.js
+                    contentDiv.innerHTML = marked.parse(markdownText);
+                } else {
+                    contentDiv.innerHTML = '<p style="color: red;">Error: Could not load the README file. Please ensure the repository is public and the README exists on the main or master branch.</p>';
+                }
+            } catch (error) {
+                contentDiv.innerHTML = '<p style="color: red;">Error: Failed to connect to GitHub to fetch the README.</p>';
+                console.error('Error fetching README:', error);
+            }
+        }
+
+        // Run the function when the page loads
+        loadReadme();
+    </script>
 </body>
 </html>
